@@ -1,5 +1,4 @@
-import { Component, signal } from '@angular/core';
-import type { AnnualData, InvestmentInput} from "./investment-input.model";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +6,5 @@ import type { AnnualData, InvestmentInput} from "./investment-input.model";
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  results = signal<AnnualData []| undefined>(undefined)
-
-
 }
 

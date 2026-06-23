@@ -1,83 +1,96 @@
-# 📈 Investment Calculator — Angular Learning Project
+﻿# Investment Calculator
 
-> ⚠️ **Learning Project** — This started as a guided demo from [Maximilian Schwarzmüller's Angular course on Udemy](https://www.udemy.com/course/the-complete-guide-to-angular-2/), and I'm extending it with my own features.
+An Angular investment calculator that estimates how an investment grows over time based on the starting amount, yearly contribution, expected annual return, and duration.
 
----
+This project was built as an Angular learning project and focuses on component communication, template-driven forms, services, signals, and formatted result output.
 
-## 📖 About
+## Features
 
-This is the **2nd demo project** from Maximilian's Angular course. The base project is an **Investment Calculator** that helps users estimate how their investments grow over time based on:
+- Enter an initial investment amount
+- Enter annual investment contributions
+- Set expected yearly return percentage
+- Set investment duration in years
+- Calculate yearly investment growth
+- Display yearly results in a table
+- Format money values with Angular currency pipes
+- Shared calculation state through an Angular service
 
-- Initial investment amount
-- Annual contribution
-- Expected annual return (%)
-- Investment duration (years)
+## Tech Stack
 
-I used this project as a hands-on way to reinforce Angular fundamentals, and I'm actively adding new features on top of the course base.
+- Angular 18
+- TypeScript
+- Angular Forms
+- CSS
+- Angular signals
 
----
+## Project Structure
 
-## 🧠 What I Learned (Course Concepts)
-
-- Angular component structure & lifecycle
-- Two-way data binding with `ngModel`
-- Reactive forms
-- Passing data between components with `@Input()` / `@Output()`
-- Displaying dynamic data in templates
-- Using Angular pipes for formatting (currency, percentage)
-
----
-
-## ✨ My Own Additions
-
-> Features I added beyond the course demo:
-
-- [ ] Dark mode toggle
-- [ ] Chart visualization of investment growth (using Chart.js or ng2-charts)
-- [ ] Export results as CSV
-- [ ] Input validation with error messages
-- [ ] Comparison mode (compare two investment scenarios side by side)
-
-*(Check back as I keep building!)*
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v18+)
-- Angular CLI: `npm install -g @angular/cli`
-
-### Installation
-
-```bash
-git clone https://github.com/your-username/angular-investment-calculator.git
-cd angular-investment-calculator
-npm install
-ng serve
+```text
+src/
+  app/
+    header/                    App header
+    user-input/                Investment input form
+    investment-results/        Results table
+    investment.service.ts      Investment calculation and shared state
+    investment-input.model.ts  Input and result interfaces
+    app.component.*            Root component
+    app.modules.ts             Root Angular module
+  main.ts                      Angular module bootstrap
 ```
 
-Then open your browser at `http://localhost:4200`
+## Getting Started
 
----
+Clone the repository:
 
-## 🛠️ Built With
+```bash
+git clone https://github.com/assemmohamed1677/Investment-Calculator.git
+cd Investment-Calculator
+```
 
-- [Angular](https://angular.io/)
-- TypeScript
-- HTML5 & CSS3
+Install dependencies:
 
----
+```bash
+npm install
+```
 
-## 📚 Course Reference
+Start the development server:
 
-- **Course:** [The Complete Guide to Angular](https://www.udemy.com/course/the-complete-guide-to-angular-2/) by Maximilian Schwarzmüller
-- **Project:** Demo #2 — Investment Calculator
-- **Platform:** Udemy
+```bash
+npm start
+```
 
----
+Open:
 
-## 📄 License
+```text
+http://localhost:4200/
+```
 
-This project is for **educational purposes only**. The original demo concept belongs to the course instructor. My added features are open for reference by other learners.
+## Build
+
+```bash
+npm run build
+```
+
+The production build is generated in:
+
+```text
+dist/essentials-practice
+```
+
+## Tests
+
+```bash
+npm test -- --watch=false --browsers=ChromeHeadless
+```
+
+## Recent Fixes
+
+- Fixed Angular module bootstrap
+- Fixed non-standalone component tests
+- Cleaned unused imports and unused root state
+- Fixed input binding and field names
+- Added basic numeric input constraints
+
+## Author
+
+Assem Mohamed

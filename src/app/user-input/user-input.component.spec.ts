@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { UserInputComponent } from './user-input.component';
 
@@ -8,7 +9,8 @@ describe('UserInputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UserInputComponent]
+      declarations: [UserInputComponent],
+      imports: [FormsModule]
     })
     .compileComponents();
 
